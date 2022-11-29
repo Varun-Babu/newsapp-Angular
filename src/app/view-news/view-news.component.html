@@ -1,0 +1,27 @@
+
+
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-3 mt-4">
+                <div class="col col-12 col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 " *ngFor="let i of data">
+                    <div class="card" >
+                        <img src="{{i.urlToImage}}" class="card-img-top" height=300px alt="...">
+                        <div style="height: 250px; overflow-y:hidden;" class="card-body">
+                          <h5 class="card-title" >Source:{{i.source.source}} {{i.source.name}}</h5>
+                          <p class="card-text">Author: {{i.author}}</p>
+                          <p class="card-text">Description:{{i.description}}</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">{{i.content}}</li>
+                          <li class="list-group-item">Published at: {{i.publishedAt}}</li>
+                        </ul>
+                        <div class="card-body">
+                          <a href="#" class="card-link">{{i.url}}</a>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
